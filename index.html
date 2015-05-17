@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Chartwork</title>
+
+		<link rel="icon" href="favicon.ico" type="image/ico">
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/docs.min.css" rel="stylesheet">
+		<link href="css/jquery.snippet.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/docs.min.js"></script>
+		<script src="js/jquery.snippet.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="bs-docs-header">
+			<div class="container">
+				<div class="logo">
+					<img src="logo.png" alt="Chartwork">
+				</div>
+				<div class="title">
+					<h1>Chartwork</h1>
+					<p>Chart widgets for Qt</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-9">
+					<div class="bs-docs-section">
+						<h1 id="overview" class="page-header">Overview</h1>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<a href="#pie-charts">
+										<img src="images/overview/pie-chart.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<a href="#grid-charts">
+										<img src="images/overview/grid-chart.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-sm-4">
+									<a href="#grouped-bar-charts">
+										<img src="images/overview/grouped-bar-chart.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<a href="#stacked-bar-charts">
+										<img src="images/overview/stacked-bar-chart.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<a href="#histograms">
+										<img src="images/overview/histogram.png" alt="Histogram" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+							</div>
+							<div class="row">
+
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<a href="#scatter-plots">
+										<img src="images/overview/scatter-plot.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<a href="#line-plots">
+										<img src="images/overview/line-plot.png" alt="Line Plot" width="100%" class="img-thumbnail">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bs-docs-section">
+						<h1 id="demo" class="page-header">Demo Video</h1>
+						<video class="video-js vjs-default-skin" poster="videos/video-poster.jpg" data-setup="{}" width="100%" controls="true">
+							<source type="video/mp4" src="videos/video.mp4">
+							<source type="video/mp4" src="videos/video.low.mp4">
+						</video>
+					</div>
+
+					<div class="bs-docs-section">
+						<h1 id="installation" class="page-header">Installation</h1>
+
+						<h3 id="installation-ubuntu">Ubuntu</h3>
+
+						<p>Chartwork runs on Ubuntu 14.04 (64 bit) and requires Qt 5.</p>
+
+						<p class="text-center">
+							<a class="btn btn-lg btn-outline" href="bin/chartwork-1.02.deb"><span class="glyphicon glyphicon-download"></span> Chartwork 1.02</a>
+						</p>
+
+						<ol>
+							<li>
+								<p>
+									Double-click the <code>.deb</code> file to open the Software Center.
+								</p>
+							</li>
+							<li>
+								<p>
+									Click ›Install‹ and enter your password.
+								</p>
+							</li>
+						</ol>
+
+						<h3 id="installation-windows">Windows</h3>
+
+						<p>Chartwork runs on Windows 7 and newer and requires at least Qt 5.4.</p>
+
+						<p class="text-center">
+							<a class="btn btn-lg btn-outline" href="http://www.qt.io/download-open-source/"><span class="glyphicon glyphicon-download"></span> Qt 5</a>
+							<a class="btn btn-lg btn-outline" href="bin/chartwork-1.1.0-x86.exe"><span class="glyphicon glyphicon-download"></span> Chartwork 1.1.0 (32 bit)</a>
+							<a class="btn btn-lg btn-outline" href="bin/chartwork-1.1.0-amd64.exe"><span class="glyphicon glyphicon-download"></span> Chartwork 1.1.0 (64 bit)</a>
+						</p>
+
+						<ol>
+							<li>
+								<p>
+									Download and install the free version of Visual Studio, <a href="http://www.visualstudio.com/" rel="nofollow">Visual Studio Community</a>.
+								</p>
+								<p>
+									Visual Studio is required to build apps with Chartwork in Qt Creator.
+								</p>
+							</li>
+							<li>
+								<p>
+									Download the open-source version of Qt 5 and Chartwork.
+								</p>
+								<p>
+									If you are running 32-bit Windows, install the 32-bit versions of Qt 5 and Chartwork.
+									On 64-bit Windows, install the 64-bit versions instead.
+								</p>
+							</li>
+							<li>
+								<p>
+									Install Qt 5.
+								</p>
+							</li>
+							<li>
+								<p>
+									Run the Chartwork installer.
+									Click ›Open Qt Directory‹ and select the location where you installed Qt 5 (e.&nbsp;g., <code>C:\Qt</code>).
+								</p>
+							</li>
+							<li>
+								<p>
+									Click ›Install‹.
+								</p>
+							</li>
+						</ol>
+
+						<div class="bs-callout bs-callout-danger">
+							<h4>If Qt Creator Crashes Immediately</h4>
+							Try turning off the Welcome screen by adding the following command-line argument to the desktop link: <code>[...]\qtcreator.exe -noload Welcome</code>.
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Help With Compiler Set-Up</h4>
+							If you need help during the configuration steps shown below, have a look at the official <a href="http://qt-project.org/doc/qtcreator/creator-targets.html">Qt Creator documentation page</a>.
+						</div>
+
+						<h3 id="installation-mac">Mac OS X</h3>
+
+						<p>Chartwork runs on Mac OS X 10.7 (Lion) and newer and requires Qt 5.4.</p>
+
+						<p class="text-center">
+							<a class="btn btn-lg btn-outline" href="http://qt-project.org/downloads"><span class="glyphicon glyphicon-download"></span> Qt 5</a>
+							<a class="btn btn-lg btn-outline" href="bin/chartwork-1.1.0.dmg"><span class="glyphicon glyphicon-download"></span> Chartwork 1.1.0</a>
+						</p>
+
+						<ol>
+							<li>
+								<p>
+									Install Xcode from the App Store.
+								</p>
+								<p>
+									Xcode ships a compiler that can be used with Qt Creator.
+								</p>
+							</li>
+							<li>
+								<p>
+									Download the open-source version of Qt 5 and Chartwork.
+								</p>
+							</li>
+							<li>
+								<p>
+									Install Qt 5.
+								</p>
+							</li>
+							<li>
+								<p>
+									Run the Chartwork installer.
+									Click ›Open Qt Directory‹ and select the location where you installed Qt 5 (e.&nbsp;g., <code>/Users/user/Qt5.4.1</code>).
+								</p>
+							</li>
+							<li>
+								<p>
+									Click ›Install‹.
+								</p>
+								<p>
+									You can now start Qt Creator from the Qt directory.
+								</p>
+							</li>
+						</ol>
+
+						<h3 id="installation-from-sources">From Sources</h3>
+
+						<p class="text-center">
+							<a class="btn btn-lg btn-outline" href="http://www.github.com/chartwork/chartwork"><span class="glyphicon glyphicon-download"></span> Chartwork Sources</a>
+						</p>
+
+						<p>
+							For instructions on how to build Chartwork from sources, see the <a href="http://www.github.com/chartwork/chartwork">readme</a> on GitHub.
+						</p>
+					</div>
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="build" class="page-header">Build Your App</h1>
+
+						<p class="text-center">
+							<a class="btn btn-lg btn-outline" href="bin/new-project-1.1.0.zip"><span class="glyphicon glyphicon-download"></span> Starter Project 1.1.0</a>
+						</p>
+
+						<p>
+							<div id="carousel-build" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-build" data-slide-to="0" class="active"></li>
+									<li data-target="#carousel-build" data-slide-to="1"></li>
+									<li data-target="#carousel-build" data-slide-to="2"></li>
+									<li data-target="#carousel-build" data-slide-to="3"></li>
+									<li data-target="#carousel-build" data-slide-to="4"></li>
+								</ol>
+
+								<div class="carousel-inner">
+									<div class="item active">
+										<img src="images/build/build-1.png" alt="Build Your App" width="100%">
+										<div class="carousel-caption">
+											<h3>Download the starter project and open the <code>project.pro</code> file with Qt Creator.</h3>
+										</div>
+									</div>
+									<div class="item">
+										<img src="images/build/build-2.png" alt="Build Your App" width="100%">
+										<div class="carousel-caption">
+											<h3>Choose where to build the debug and release targets.</h3>
+										</div>
+									</div>
+									<div class="item">
+										<img src="images/build/build-3.png" alt="Build Your App" width="100%">
+										<div class="carousel-caption">
+											<h3>The file <code>mainwindow.cpp</code> is where you will write your code.</h3>
+										</div>
+									</div>
+									<div class="item">
+										<img src="images/build/build-4.png" alt="Build Your App" width="100%">
+										<div class="carousel-caption">
+											<h3>Double-clicking <code>mainwindow.ui</code> opens Qt Designer.</h3>
+										</div>
+									</div>
+									<div class="item">
+										<img src="images/build/build-5.png" alt="Build Your App" width="100%">
+										<div class="carousel-caption">
+											<h3>Click on the green arrow to build and test your app.</h3>
+										</div>
+									</div>
+								</div>
+
+								<a class="left carousel-control" href="#carousel-build" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+								</a>
+								<a class="right carousel-control" href="#carousel-build" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+								</a>
+							</div>
+						</p>
+					</div>
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="pie-charts" class="page-header">Pie Charts</h1>
+
+						<h3 id="pie-charts-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-pie-chart/configuration.png" width="100%" alt="Pie Chart">
+									<div class="caption">
+										Pie Chart Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setLabels(QStringList)
+setShowKey(bool)
+setKeyScale(double)
+setShowPercentage(bool)
+setPrecision(int)
+setColor0(QColor)
+setColor1(QColor)
+setColor2(QColor)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Adding Slices</h4>
+						<p>To change the number of slices, click on the option <code>labels</code>.
+							In the pop-up menu, you can add or remove slices and change their labels.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-pie-chart/configuration-1.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-pie-chart/configuration-2.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Hiding the Key</h4>
+						<p>By removing the checkmark next to <code>showKey</code>, you can hide the key.
+							Instead, you can also reduce the dimensions of the key with <code>keyScale</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-pie-chart/configuration-1.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-pie-chart/configuration-3.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Percentage Precision</h4>
+						<p>You can change the number of decimal places of the percentages with the <code>precision</code> option.</p>
+
+						<h4>Hiding Percentages</h4>
+						<p>By removing the checkmark next to <code>showPercentage</code>, you can hide the percentages.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-pie-chart/configuration-1.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-pie-chart/configuration-4.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Color Palette</h4>
+						<p>At the bottom of the options panel, you can change the color palette (via the options <code>color0</code> to <code>color7</code>).
+							<code>color0</code> will be used for the first slice, and so forth.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-pie-chart/configuration-1.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-pie-chart/configuration-5.png" alt="Pie Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="pie-charts-data">Add Your Data</h3>
+
+						<p>To resize the slice labeled as ›C‹ to a value of 35, just write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->pieChart->setValue("C", 35.0);</pre>
+						</div>
+
+						<p>Alternatively, you can address slices by their index, <strong>starting with 0</strong>.
+							In our example, ›C‹ has index 2, and thus you can write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->pieChart->setValue(2, 35.0);</pre>
+						</div>
+
+						<p>You can also set the values of all slices simultaneously, e.&thinsp;g., to 100:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->pieChart->setAllValues(100.0);</pre>
+						</div>
+
+						<p>Reading the size of a slice in the pie chart is similar to writing it—you can address it either by its label (›C‹) or its index (2):</p>
+
+						<div class="highlight">
+							<pre class="cpp">double value1 = ui->pieChart->value("C");
+	double value2 = ui->pieChart->value(2);</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="grid-charts" class="page-header">Grid Charts</h1>
+
+						<h3 id="grid-charts-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grid-chart/configuration.png" width="100%" alt="Grid Chart">
+									<div class="caption">
+										Grid Chart Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setShowKey(bool)
+setKeyScale(double)
+setAntialiasing(bool)
+setGridSize(QSize)
+setMinValue(double)
+setMaxValue(double)
+setPrecision(int)
+setNumberOfColors(int)
+setColor0(QColor)
+setColor1(QColor)
+setColor2(QColor)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Resolution</h4>
+						<p>To change the number of columns or rows, click on the plus symbol next to <code>gridSize</code>.
+							The options <code>Width</code> and <code>Height</code> determine the grid resolution.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grid-chart/configuration-1.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grid-chart/configuration-2.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Minimum and Maximum Value</h4>
+						<p>The minimum and maximum values determine the range of values that will be mapped to the color palette.
+							Cells with the value <code>minValue</code> will be displayed with the first color <code>color0</code>, the value <code>maxValue</code> will be shown having the last color and in-between values will be blended between the colors in the color palette.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grid-chart/configuration-1.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grid-chart/configuration-6.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Key Precision</h4>
+						<p>You can change the number of decimal places in the key with the <code>precision</code> option.</p>
+
+						<h4>Hiding the Key</h4>
+						<p>By removing the checkmark next to <code>showKey</code>, you can hide the key.
+							Instead, you can also reduce the dimensions of the key with <code>keyScale</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grid-chart/configuration-1.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grid-chart/configuration-3.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Number of Colors</h4>
+						<p>If you need more or less than 5 color steps, adjust the <code>numberOfColors</code> option.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grid-chart/configuration-1.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grid-chart/configuration-4.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Color Palette</h4>
+						<p>At the bottom of the options panel, you can change the color palette (via the options <code>color0</code> to <code>color7</code>).
+							<code>color0</code> will be used for the first step, and so forth.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grid-chart/configuration-1.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grid-chart/configuration-5.png" alt="Grid Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="grid-charts-data">Add Your Data</h3>
+
+						<p>To set the value of cell [5, 10] to 75, write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->gridChart->setValue(5, 10, 75.0);</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Origin</h4>
+							The origin [0, 0] of the grid chart corresponds to the top-left corner.
+						</div>
+
+						<p>You can also set the values of all cells simultaneously, e.&thinsp;g., to 0:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->gridChart->setAllValues(0.0);</pre>
+						</div>
+
+						<p>Reading the value of a cell is similar to writing it:</p>
+
+						<div class="highlight">
+							<pre class="cpp">double value = ui->gridChart->value(5, 10);</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="grouped-bar-charts" class="page-header">Grouped Bar Charts</h1>
+
+						<h3 id="grouped-bar-charts-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grouped-bar-chart/configuration.png" width="100%" alt="Grouped Bar Chart">
+									<div class="caption">
+										Grouped Bar Chart Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setShowKey(bool)
+setKeyScale(double)
+setYMax(double)
+setYPrecision(int)
+setGroupLabels(QStringList)
+setSubGroupLabels(QStringList)
+setColor0(QColor)
+setColor1(QColor)
+setColor2(QColor)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Adding Bars and Groups</h4>
+						<p>Grouped bar charts display bars in different groups.</p>
+
+						<p>The option <code>groupLabels</code> defines how many groups will be displayed (see screenshot in the middle below).
+							By clicking on this option, a pop-up menu will show up in which you can add, remove, and rename groups.</p>
+
+						<p>In addition, you can configure the number of <i>bars per group</i> with the option <code>subGroupLabels</code> (see the right screenshot).
+							In analogy to groups, you can add, remove, and rename them.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grouped-bar-chart/configuration-1.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grouped-bar-chart/configuration-2.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grouped-bar-chart/configuration-3.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Maximum Value and Precision</h4>
+						<p>You can modify the maximum value of the scale with <code>yMax</code> (the minimum is always 0).
+							The precision of the scale can be changed with <code>yPrecision</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grouped-bar-chart/configuration-1.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grouped-bar-chart/configuration-4.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Hiding the Key</h4>
+						<p>By removing the checkmark next to <code>showKey</code>, you can hide the key.
+							Instead, you can also reduce the dimensions of the key with <code>keyScale</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grouped-bar-chart/configuration-1.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grouped-bar-chart/configuration-5.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Color Palette</h4>
+						<p>At the bottom of the options panel, you can change the color palette (via the options <code>color0</code> to <code>color7</code>).
+							<code>color0</code> will be used for the first bar in each group, and so forth.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-grouped-bar-chart/configuration-1.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-grouped-bar-chart/configuration-6.png" alt="Grouped Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="grouped-bar-charts-data">Add Your Data</h3>
+
+						<p>To resize the bar labeled as ›C‹ in group ›Group 1‹ to a value of 15, just write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->groupedBarChart->setValue("Group 1", "C", 15.0);</pre>
+						</div>
+
+						<p>Alternatively, you can address groups and subgroups by their index, <strong>starting with 0</strong>.
+							In our example, ›Group 1‹ has index 0 and ›C‹ has index 2, and thus you can write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->groupedBarChart->setValue(0, 2, 15.0);</pre>
+						</div>
+
+						<p>You can also set the values of all bars simultaneously, e.&thinsp;g., to 100:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->groupedBarChart->setAllValues(100.0);</pre>
+						</div>
+
+						<p>Reading the size of a bar in the bar chart is similar to writing it—you can address it either by labels (›Group 1‹, ›C‹) or indices (0, 2):</p>
+
+						<div class="highlight">
+							<pre class="cpp">double value1 = ui->groupedBarChart->value("Group 1", "C");
+	double value2 = ui->groupedBarChart->value(0, 2);</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="stacked-bar-charts" class="page-header">Stacked Bar Charts</h1>
+
+						<h3 id="stacked-bar-charts-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-stacked-bar-chart/configuration.png" width="100%" alt="Stacked Bar Chart">
+									<div class="caption">
+										Stacked Bar Chart Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setShowKey(bool)
+setKeyScale(double)
+setYMax(double)
+setYPrecision(int)
+setNormalize(bool)
+setGroupLabels(QStringList)
+setSubGroupLabels(QStringList)
+setColor0(QColor)
+setColor1(QColor)
+setColor2(QColor)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Adding Bars and Parts</h4>
+						<p>Stacked bar charts display several bars with stacked subgroups.</p>
+
+						<p>The option <code>groupLabels</code> defines how many bars will be displayed (see screenshot in the middle below).
+							By clicking on this option, a pop-up menu will show up in which you can add, remove, and rename bars.</p>
+
+						<p>In addition, you can configure the number of stacked <i>parts per bar</i> with the option <code>subGroupLabels</code> (see the right screenshot).
+							In analogy to bars, you can add, remove, and rename them.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-1.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-2.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-3.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Normalized Data</h4>
+						<p>By default, data in stacked bar charts are normalized to 100 %. You can disable this behavior by removing the checkmark next to <code>normalize</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-stacked-bar-chart/configuration-1.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-4.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Maximum Value and Precision</h4>
+						<p>When <code>normalize</code> is disabled, you can modify the maximum value of the scale with <code>yMax</code> (the minimum is always 0).
+							The precision of the scale can be changed with <code>yPrecision</code>.</p>
+
+						<div class="bs-callout bs-callout-warning">
+							<h4>Not For Normalized Bar Charts</h4>
+							These options have no effect when you use <code>normalize</code>.
+						</div>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-stacked-bar-chart/configuration-4.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-5.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Hiding the Key</h4>
+						<p>By removing the checkmark next to <code>showKey</code>, you can hide the key.
+							Instead, you can also reduce the dimensions of the key with <code>keyScale</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-stacked-bar-chart/configuration-1.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-6.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Color Palette</h4>
+						<p>At the bottom of the options panel, you can change the color palette (via the options <code>color0</code> to <code>color7</code>).
+							<code>color0</code> will be used for the first part in each bar, and so forth.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-stacked-bar-chart/configuration-1.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-stacked-bar-chart/configuration-7.png" alt="Stacked Bar Chart" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="stacked-bar-charts-data">Add Your Data</h3>
+
+						<p>To resize the part labeled as ›C‹ in bar ›G1‹ to a value of 65, just write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->stackedBarChart->setValue("G1", "C", 65.0);</pre>
+						</div>
+
+						<p>Alternatively, you can address bars and parts by their index, <strong>starting with 0</strong>.
+							In our example, ›G1‹ has index 0 and ›C‹ has index 2, and thus you can write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->stackedBarChart->setValue(0, 2, 65.0);</pre>
+						</div>
+
+						<p>You can also set the values of all parts simultaneously, e.&thinsp;g., to 100:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->stackedBarChart->setAllValues(100.0);</pre>
+						</div>
+
+						<p>Reading the size of a part in the bar chart is similar to writing it—you can address it either by labels (›G1‹, ›C‹) or indices (0, 2):</p>
+
+						<div class="highlight">
+							<pre class="cpp">double value1 = ui->stackedBarChart->value("G1", "C");
+	double value2 = ui->stackedBarChart->value(0, 2);</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="histograms" class="page-header">Histograms</h1>
+
+						<h3 id="histograms-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-histogram/configuration.png" width="100%" alt="Histogram">
+									<div class="caption">
+										Histogram Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setShowKey(bool)
+setKeyScale(double)
+setXMin(double)
+setXMax(double)
+setXStep(double)
+setXPrecision(int)
+setYMax(double)
+setYPrecision(int)
+setColor(QColor)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Number of Bars</h4>
+						<p>Histograms display bars for a range of values, specified by the options <code>xMin</code>, <code>xMax</code>, and <code>xStep</code>.
+							For instance, you can reproduce the right screenshot if you choose the range 500 to 1000 and steps of 50.</p>
+
+						<p>Furthermore, you can change the number of decimal places in the bar labels with <code>xPrecision</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-histogram/configuration-1.png" alt="Histogram" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-histogram/configuration-2.png" alt="Histogram" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Maximum Value and Precision</h4>
+						<p>You can modify the maximum value of the <i>y</i> scale with <code>yMax</code> (the minimum is always 0).
+							The precision of the scale can be changed with <code>yPrecision</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-histogram/configuration-1.png" alt="Histogram" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-histogram/configuration-3.png" alt="Histogram" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Color</h4>
+						<p>You can change the color of the histogram via the option <code>color</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-histogram/configuration-1.png" alt="Histogram" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-histogram/configuration-4.png" alt="Histogram" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="histograms-data">Add Your Data</h3>
+
+						<p>To resize the 3rd bar in the histogram to 40, write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->histogram->setValue(2, 40.0);</pre>
+						</div>
+
+						<p>You can also set the values of all parts simultaneously, e.&thinsp;g., to 100:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->histogram->setAllValues(100.0);</pre>
+						</div>
+
+						<p>Reading the size of a bar in the histogram is similar to writing it:</p>
+
+						<div class="highlight">
+							<pre class="cpp">double value = ui->histogram->value(2);</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="scatter-plots" class="page-header">Scatter Plots</h1>
+
+						<h3 id="scatter-plots-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-scatter-plot/configuration.png" width="100%" alt="Scatter Plot">
+									<div class="caption">
+										Scatter Plots Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setShowKey(bool)
+setKeyScale(double)
+setXMin(double)
+setXMax(double)
+setXPrecision(int)
+setYMin(double)
+setYMax(double)
+setYPrecision(int)
+setLabels(QStringList)
+setSymbolSize(int)
+setColor0(QColor)
+setSymbol0(Symbol::Type)
+setColor1(QColor)
+setSymbol1(Symbol::Type)
+setColor2(QColor)
+setSymbol2(Symbol::Type)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Adding Data Series</h4>
+						<p>Scatter Plots can display different data series using different colors and symbols.
+							To add or remove data series, click on the option <code>labels</code> and modify the entries in the pop-up window that shows up.
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-scatter-plot/configuration-1.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-scatter-plot/configuration-2.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Axes and Precision</h4>
+						<p>You can choose minimum and maximum values for both axes using <code>xMin</code>, <code>xMax</code>, <code>yMin</code>, and <code>yMax</code>, respectively.
+							The precision of the scales can be changed with <code>xPrecision</code> and <code>yPrecision</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-scatter-plot/configuration-1.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-scatter-plot/configuration-3.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Hiding the Key</h4>
+						<p>By removing the checkmark next to <code>showKey</code>, you can hide the key.
+							Instead, you can also reduce the dimensions of the key with <code>keyScale</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-scatter-plot/configuration-1.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-scatter-plot/configuration-5.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Symbols and Color Palette</h4>
+						<p>At the bottom of the options panel, you can change the symbols and the color palette (via the options <code>color0</code> to <code>color7</code> and <code>symbol0</code> to <code>symbol7</code>). <code>color0</code> and <code>symbol0</code> will be used for the first data series, and so forth.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-scatter-plot/configuration-1.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-scatter-plot/configuration-6.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
+									<div class="panel panel-default">
+										<div class="panel-heading">List of Available Symbols</div>
+										<table class="table">
+											<tr>
+												<td>Circle</td>
+												<td><img src="images/configuration-scatter-plot/symbols-1.png" alt="Symbol"></td>
+												<td>CircleOutline</td>
+												<td><img src="images/configuration-scatter-plot/symbols-5.png" alt="Symbol"></td>
+											</tr>
+											<tr>
+												<td>Square</td>
+												<td><img src="images/configuration-scatter-plot/symbols-2.png" alt="Symbol"></td>
+												<td>SquareOutline</td>
+												<td><img src="images/configuration-scatter-plot/symbols-6.png" alt="Symbol"></td>
+											</tr>
+											<tr>
+												<td>Diamond</td>
+												<td><img src="images/configuration-scatter-plot/symbols-3.png" alt="Symbol"></td>
+												<td>DiamondOutline</td>
+												<td><img src="images/configuration-scatter-plot/symbols-7.png" alt="Symbol"></td>
+											</tr>
+											<tr>
+												<td>Plus</td>
+												<td><img src="images/configuration-scatter-plot/symbols-4.png" alt="Symbol"></td>
+												<td>Cross</td>
+												<td><img src="images/configuration-scatter-plot/symbols-8.png" alt="Symbol"></td>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Making Symbols Bigger or Smaller</h4>
+						<p>With the option <code>symbolSize</code>, you can increase or decrease the size of the symbols.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-scatter-plot/configuration-1.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-scatter-plot/configuration-4.png" alt="Scatter Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="scatter-plots-data">Add Your Data</h3>
+
+						<p>To add the data point [5, 20] to your data series ›Baseline‹, just write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->scatterPlot->addData("Baseline", 5.0, 20.0);</pre>
+						</div>
+
+						<p>Alternatively, you can address data series by their index, starting with 0. In our example, ›Baseline‹ has index 0, and thus you can write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->scatterPlot->addData(0, 5.0, 20.0);</pre>
+						</div>
+
+						<p>To clear the whole data series ›Baseline‹, write one of the following:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->scatterPlot->clearData("Baseline");
+	ui->scatterPlot->clearData(0);</pre>
+						</div>
+
+						<p>You can also clear all data series of your plot simultaneously:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->scatterPlot->clearAllData();</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="line-plots" class="page-header">Line Plots</h1>
+
+						<h3 id="line-plots-visuals">Visual Configuration</h3>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="thumbnail col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-line-plot/configuration.png" width="100%" alt="Line Plot">
+									<div class="caption">
+										Line Plots Configuration Options in Qt Designer.
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<div class="highlight">
+										<pre class="cpp">setTitle(QString)
+setShowKey(bool)
+setKeyScale(double)
+setXMin(double)
+setXMax(double)
+setXPrecision(int)
+setYMin(double)
+setYMax(double)
+setYPrecision(int)
+setLabels(QStringList)
+setLineWidth(double)
+setColor0(QColor)
+setColor1(QColor)
+setColor2(QColor)
+...</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Adding Data Series</h4>
+						<p>Line Plots can display different data series using differently colored lines.
+							To add or remove data series, click on the option <code>labels</code> and modify the entries in the pop-up window that shows up.
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-line-plot/configuration-1.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-line-plot/configuration-2.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Axes and Precision</h4>
+						<p>You can choose minimum and maximum values for both axes using <code>xMin</code>, <code>xMax</code>, <code>yMin</code>, and <code>yMax</code>, respectively.
+							The precision of the scales can be changed with <code>xPrecision</code> and <code>yPrecision</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-line-plot/configuration-1.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-line-plot/configuration-3.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Hiding the Key</h4>
+						<p>By removing the checkmark next to <code>showKey</code>, you can hide the key.
+							Instead, you can also reduce the dimensions of the key with <code>keyScale</code>.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-line-plot/configuration-1.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-line-plot/configuration-5.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Changing the Color Palette</h4>
+						<p>At the bottom of the options panel, you can change the color palette (via the options <code>color0</code> to <code>color7</code>). <code>color0</code> will be used for the first data series, and so forth.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-line-plot/configuration-1.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-line-plot/configuration-6.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h4>Making Lines Thicker or Thinner</h4>
+						<p>With the option <code>lineWidth</code> you can increase or decrease the width of the lines.</p>
+
+						<div class="bs-docs-grid">
+							<div class="row">
+								<div class="col-md-4 col-sm-4 col-md-offset-2 col-sm-offset-2">
+									<img src="images/configuration-line-plot/configuration-1.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<img src="images/configuration-line-plot/configuration-4.png" alt="Line Plot" width="100%" class="img-thumbnail">
+								</div>
+							</div>
+						</div>
+
+						<h3 id="line-plots-data">Add Your Data</h3>
+
+						<p>To add the data point [5, 20] to your data series ›Baseline‹, just write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->linePlot->addData("Baseline", 5.0, 20.0);</pre>
+						</div>
+
+						<p>Alternatively, you can address data series by their index, starting with 0. In our example, ›Baseline‹ has index 0, and thus you can write:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->linePlot->addData(0, 5.0, 20.0);</pre>
+						</div>
+
+						<p>To clear the whole data series ›Baseline‹, write one of the following:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->linePlot->clearData("Baseline");
+	ui->linePlot->clearData(0);</pre>
+						</div>
+
+						<p>You can also clear all data series of your plot simultaneously:</p>
+
+						<div class="highlight">
+							<pre class="cpp">ui->linePlot->clearAllData();</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Call Update</h4>
+							After setting all your data in a plot, call <code>ui->myChart->update()</code>.
+							Else, your changes won’t be visible immediately.
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="troubleshooting" class="page-header">Troubleshooting</h1>
+
+						<h3 id="troubleshooting-see-nothing">I Don’t See My Data</h3>
+						There are two main reasons why you might not see your data, even though you called the functions listed above:
+						wrongly set up axes and missing drawing updates.
+
+						<h4>Axis Set-Up Is Wrong</h4>
+						<p>Assume you have set up a scatter plot ranging from −1 to +1 both in <i>x</i> and <i>y</i>.
+							If you add a data point at [50, 50], it will obviously not be painted.</p>
+
+						<p>If you don’t see your data, first make sure you configured the charts to use the same value range your own code uses.</p>
+
+						<h4>Charts Not Updated</h4>
+
+						<p>If you still don’t see any changes in your application, you might have forgotten to call the <code>update()</code> method after setting your data in the chart. If you don’t call <code>update()</code>, the chart will not be painted.</p>
+
+						<p>Do it like this:</p>
+						<div class="highlight">
+							<pre class="cpp">for (int x = 0; x < 20; x++)
+	for (int y = 0; y < 20; y++)
+		ui->gridChart->setValue(x, y, myValue);
+
+ui->gridChart->update();</pre>
+						</div>
+
+						<div class="bs-callout bs-callout-info">
+							<h4>Improving Performance</h4>
+							If you use <code>for</code> loops, call <code>update()</code> once at the end (like shown above) to improve performance.
+						</div>
+
+						<h3 id="troubleshooting-errors">Error Messages</h3>
+						<p>If you call functions with invalid values, you might get an error message.
+							The following explains the sources of these errors and how to fix them.</p>
+
+						<div class="bs-callout bs-callout-danger">
+							<h4>Out-of-Range Error</h4>
+							<pre>[Error] Access to ScatterPlot 'scatterPlot' at dataSeries = 5 is out of range.
+        Allowed values are dataSeries = 0...2 here.</pre>
+						</div>
+
+						<p>In this example, the programmer has tried to write a value in the 6th data series in his scatter plot.
+							However, he has created only 3, causing an out-of-range error.</p>
+
+						<ul>
+							<li>Check whether the value you tried to access is valid.</li>
+							<li>In pie charts, add a new slice label if necessary.</li>
+							<li>In grid charts, increase the grid size if necessary.</li>
+							<li>In bar charts, add new group or subgroup labels if necessary.</li>
+							<li>In a scatter and line plot, add new data series labels if necessary.</li>
+						</ul>
+
+						<div class="bs-callout bs-callout-danger">
+							<h4>Empty Error</h4>
+							<pre>[Error] Cannot access labels of LinePlot 'linePlot', because it is empty.</pre>
+						</div>
+
+						<p>This error means that you tried to access a value in a chart, but it has no data series, groups, subgroups, etc. yet.</p>
+
+						<ul>
+							<li>In pie charts, add as many slice labels as you need.</li>
+							<li>In bar charts, add as many group or subgroup labels as necessary.</li>
+							<li>In a scatter and line plot, add as many data series labels as you need.</li>
+						</ul>
+
+						<div class="bs-callout bs-callout-danger">
+							<h4>Unknown Item Error</h4>
+							<pre>[Error] Access to LinePlot 'linePlot' at label = 'Baseline' is invalid.
+        Allowed values for label are here:
+        * A
+        * B
+        * C</pre>
+						</div>
+
+						<p>This error means that you tried to access a group, subgroup, pie slice, or data series in a chart which does not exist.</p>
+
+						<ul>
+							<li>Check whether you have a typo in the string.</li>
+							<li>Try one of the listed items instead.</li>
+							<li>In pie charts, add a new slice label if necessary.</li>
+							<li>In grid charts, increase the grid size if necessary.</li>
+							<li>In bar charts, add new group or subgroup labels if necessary.</li>
+							<li>In a scatter and line plot, add new data series labels if necessary.</li>
+						</ul>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="sources-contribute" class="page-header">Sources/Contribute</h1>
+
+						<p>
+							The <a href="http://www.github.com/chartwork/chartwork" ref="nofollow">source code</a> is hosted at GitHub.
+						</p>
+
+						<p>
+							Feel free to build new features and fix bugs by creating a pull request.
+							You are also welcome to report any issues and feature suggestions.
+						</p>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h1 id="license" class="page-header">License</h1>
+
+						<h2>The MIT License (MIT)</h2>
+
+						<p>Copyright (c) 2015 Patrick Lühne and Christoph Sterz</p>
+
+						<p>
+							Permission is hereby granted, free of charge, to any person obtaining a copy
+							of this software and associated documentation files (the "Software"), to deal
+							in the Software without restriction, including without limitation the rights
+							to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+							copies of the Software, and to permit persons to whom the Software is
+							furnished to do so, subject to the following conditions:
+						</p>
+
+						<p>
+							The above copyright notice and this permission notice shall be included in all
+							copies or substantial portions of the Software.
+						</p>
+
+						<p>
+							THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+							IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+							FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+							AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+							LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+							OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+							SOFTWARE.
+						</p>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+				<div class="col-md-3">
+					<div class="bs-docs-sidebar hidden-print" role="complementary">
+						<ul class="nav bs-docs-sidenav">
+							<li>
+								<a href="#overview">Overview</a>
+							</li>
+							<li>
+								<a href="#demo">Demo Video</a>
+							</li>
+							<hr></hr>
+							<li>
+								<a href="#installation">Installation</a>
+								<ul class="nav">
+									<li><a href="#installation-ubuntu">Ubuntu</a></li>
+									<li><a href="#installation-windows">Windows</a></li>
+									<li><a href="#installation-mac">Mac OS X</a></li>
+									<li><a href="#installation-from-sources">From Sources</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#build">Build Your App</a>
+							</li>
+							<hr></hr>
+							<li>
+								<a href="#pie-charts">Pie Charts</a>
+								<ul class="nav">
+									<li><a href="#pie-charts-visuals">Visual Configuration</a></li>
+									<li><a href="#pie-charts-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#grid-charts">Grid Charts</a>
+								<ul class="nav">
+									<li><a href="#grid-charts-visuals">Visual Configuration</a></li>
+									<li><a href="#grid-charts-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#grouped-bar-charts">Grouped Bar Charts</a>
+								<ul class="nav">
+									<li><a href="#grouped-bar-charts-visuals">Visual Configuration</a></li>
+									<li><a href="#grouped-bar-charts-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#stacked-bar-charts">Stacked Bar Charts</a>
+								<ul class="nav">
+									<li><a href="#stacked-bar-charts-visuals">Visual Configuration</a></li>
+									<li><a href="#stacked-bar-charts-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#histograms">Histograms</a>
+								<ul class="nav">
+									<li><a href="#histograms-visuals">Visual Configuration</a></li>
+									<li><a href="#histograms-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#scatter-plots">Scatter Plots</a>
+								<ul class="nav">
+									<li><a href="#scatter-plots-visuals">Visual Configuration</a></li>
+									<li><a href="#scatter-plots-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#line-plots">Line Plots</a>
+								<ul class="nav">
+									<li><a href="#line-plots-visuals">Visual Configuration</a></li>
+									<li><a href="#line-plots-data">Add Your Data</a></li>
+								</ul>
+							</li>
+							<hr></hr>
+							<li>
+								<a href="#troubleshooting">Troubleshooting</a>
+								<ul class="nav">
+									<li><a href="#troubleshooting-see-nothing">I Don’t See My Data</a></li>
+									<li><a href="#troubleshooting-errors">Error Messages</a></li>
+								</ul>
+							</li>
+							<hr></hr>
+							<li>
+								<a href="#sources-contribute">Sources/Contribute</a>
+							</li>
+							<li>
+								<a href="#license">License</a>
+							</li>
+						</ul>
+						</div>
+					</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="bs-docs-footer">
+				<p class="text-muted"><a href="http://www.github.com/chartwork/chartwork">Chartwork</a>, 2015.</p>
+				<p class="text-muted">Theme by <a href="http://getbootstrap.com/" rel="nofollow">Bootstrap Docs</a> (Creative Commons Attribution 3.0 Unported License).</p>
+			</div>
+		</div>
+	</body>
+</html>
